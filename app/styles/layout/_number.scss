@@ -1,0 +1,56 @@
+.number {
+  @include bg($third-color);
+  &-list {
+    @include flexbox();
+  }
+  &-item {
+    width: 20%;
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+    text-align: center;
+    color: white;
+    border-right: 1px solid white;
+    &:first-child {
+      border-left: 1px solid white;
+    }
+  }
+  &-count {
+    font-weight: bold;
+    font-size: 7.2rem;
+    margin-bottom: 2rem;
+  }
+  &-text {
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+  @include maxWidth(1023px) {
+    &-item {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+    &-count {
+      font-size: 5rem;
+      margin-bottom: 1rem;
+    }
+    &-text {
+      font-size: 1.4rem;
+    }
+  }
+  @include maxWidth(767px) {
+    &-list {
+      display: block;
+    }
+    &-item {
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+      width: 100%;
+      border-right: 0;
+      &:first-child {
+        border-left: 0;
+      }
+      &:not(:last-child) {
+        border-bottom: 1px solid white;
+      }
+    }
+  }
+}

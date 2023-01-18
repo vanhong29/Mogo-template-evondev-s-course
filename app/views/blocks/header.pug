@@ -1,0 +1,27 @@
+header.header 
+	.container 
+		.header-top 
+			a(href="index.html").header-logo MoGo
+			i.fa.fa-bars.header-toggle
+			ul.header-menu
+				+menuLink({link: '#', title : "about"})
+				+menuLink({link: '#', title : "service"})
+				+menuLink({link: '#', title : "work"})
+				+menuLink({link: '#', title : "blog"})
+				+menuLink({link: '#', title : "contact"})
+				li.header-menu-item 
+					a.header-menu-icon(href= "#") 
+						i.fa.fa-shopping-cart.header-icon
+				li.header-menu-item 
+					a.header-menu-icon(href= "#") 
+						i.fa.fa-search.header-icon
+
+		.header-content
+			h2.header-content-caption Creative Template 
+			h1.header-content-main welcome to mogo
+			a(href="#").header-content-more Learn more
+		.header-bottom
+			+bottomItem({extra: "is-active", number: "01", text: "intro"})
+			+bottomItem({extra: "", number: "02", text: "work"})
+			+bottomItem({extra: "", number: "03", text: "about"})
+			+bottomItem({extra: "", number: "04", text: "contacts"})

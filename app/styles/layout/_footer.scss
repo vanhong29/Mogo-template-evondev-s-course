@@ -1,0 +1,141 @@
+.footer {
+  &-top {
+    padding: 7rem 0;
+    @include flexbox(stretch, space-between);
+  }
+  &-column {
+    width: calc(35% - 2.5rem);
+    &:first-child {
+      width: calc(40% - 2.5rem);
+    }
+    &:last-child {
+      width: calc(25% - 2.5rem);
+    }
+  }
+  &-heading {
+    text-transform: uppercase;
+    font-weight: 500;
+    height: 4rem;
+    margin-bottom: 2rem;
+  }
+  &-heading--logo {
+    font-size: 4.6rem;
+    color: $text-color;
+    text-transform: none;
+    font-weight: bold;
+    display: inline-block;
+  }
+  &-desc {
+    padding-top: 2rem;
+    margin-bottom: 4.5rem;
+    font-style: normal;
+  }
+  &-follower {
+    strong {
+      font-weight: bold;
+      font-size: 1.8em;
+    }
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $gray-color;
+    margin-bottom: 1.5rem;
+  }
+  &-social {
+    @include flexbox(center);
+    margin-bottom: 3.5rem;
+  }
+  &-social-list {
+    @include flexbox;
+  }
+  &-icon {
+    color: $third-color;
+    margin-left: 2rem;
+  }
+  &-form {
+    @include flexbox;
+    width: 100%;
+    max-width: 38rem;
+  }
+  &-form-input {
+    border: 1px solid $third-color;
+    padding: 1.5rem;
+    width: 60%;
+    @include bg(white);
+  }
+  &-form-button {
+    border: 1px solid $third-color;
+    flex-grow: 1;
+    text-transform: uppercase;
+    color: white;
+    @include bg($third-color);
+    font-weight: 700;
+  }
+  &-bottom {
+    // margin: 0 auto;
+    text-align: center;
+    padding: 2.5rem 0;
+    color: black;
+    span {
+      color: $primary-color;
+    }
+  }
+  &-blog-item {
+    @include flexbox(center, space-between);
+    margin-bottom: 3rem;
+  }
+  &-blog-image {
+    @include size(12rem, 8rem);
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-right: 2rem;
+    // object-position: top;
+  }
+  &-blog-title {
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    @include textClamp(2);
+    font-size: 1.2rem;
+    color: $title-color;
+    pointer-events: none;
+  }
+
+  &-insta-images {
+    @include flexbox(stretch, flex-start, wrap);
+    margin-left: -2px;
+    margin-bottom: 2rem;
+  }
+  &-insta-image {
+    margin-left: 2px;
+    width: calc(33.33% - 2px);
+    margin-bottom: 2px;
+    padding-bottom: 33.33%;
+    height: 0;
+    position: relative;
+    img {
+      @include size(100%);
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  &-more {
+    color: $title-color;
+  }
+  @include maxWidth(1023px) {
+    &-top {
+      display: block;
+      padding: 3rem 0;
+    }
+    &-column {
+      &:not(:nth-child(999)) {
+        width: 100%;
+        margin-bottom: 3rem;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

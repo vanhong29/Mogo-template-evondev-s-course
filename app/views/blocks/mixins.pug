@@ -1,0 +1,110 @@
+mixin menuLink(data)
+	li.header-menu-item 
+		a.header-menu-link(href= data.link)= data.title
+
+mixin bottomItem(data)
+	.header-bottom-item(class= data.extra)
+		h3.header-bottom-number= data.number
+		span.header-bottom-text= data.text
+
+mixin blockBox(data)
+	.block-box
+		h3.block-box-caption= data.caption
+		h2.block-box-heading= data.title 
+		if data.desc 
+			p.block-box-desc= data.desc
+
+mixin aboutItem(data)
+	li.about-item 
+		img.about-image(src= data.src)
+		.about-content 
+			i(class= data.icon).about-icon
+			span.about-text= data.text
+
+mixin numberItem(data)
+	li.number-item 
+		h4.number-count= data.count
+		span.number-text= data.text
+
+mixin serviceItem(data)
+	.service-item 
+		img.service-image(src= data.src)
+		.service-content 
+			h3.service-title= data.title
+			p.service-desc= data.desc
+
+mixin wedoItem(data)
+	.wedo-item
+		.wedo-header
+			img.wedo-icon(src= data.src)
+			h4.wedo-title= data.title
+			i.wedo-arrow(class= data.icon)
+		.wedo-desc.text(class= data.active)
+			.wedo-inner= data.desc
+
+mixin teamItem(data)
+	.team-item 
+		.team-main 
+			img.src(src= data.src, alt="").team-image
+			.team-content 
+				ul.team-social-list 
+					li.team-social-item 
+						a.team-social-link(href= data.fb) 
+							i.fab.fa-facebook-f
+					li.team-social-item 
+						a.team-social-link(href= data.tt) 
+							i.fab.fa-twitter
+					li.team-social-item 
+						a.team-social-link(href= data.pin) 
+							i.fab.fa-pinterest
+					li.team-social-item 
+						a.team-social-link(href= data.insta) 
+							i.fab.fa-instagram
+		.team-info 
+			h3.team-name= data.name
+			span.team-position.text= data.job
+
+
+mixin workItem(data)
+	.work-item(class= data.full)
+		img.work-image(src= data.src, alt="")
+		.work-content 
+			i.work-icon(class= data.icon)
+			h3.work-title= data.title
+			span.work-desc.text= data.desc
+
+mixin peopleItem(data)
+	li.people-item
+		img.people-image(src= data.src)
+		.people-info 
+				h3.people-name= data.name
+				span.people-job.text= data.job
+				p.people-desc.text= data.desc
+
+mixin storyItem(data)
+	a.story-item(href= data.link )
+				.story-media
+					img.story-image(src= data.src, alt="")
+					.story-date 
+						h3.story-date-number= data.date
+						span.story-date-text.text= data.month
+				.story-heading= data.heading
+				.story-desc.text= data.desc
+				.story-icons
+					.story-icon-left
+						i.story-icon(class= data.icon1)
+						span.story-icon-count.text= data.count1
+					.story-icon-right
+						i.story-icon(class= data.icon2)
+						span.story-icon-count.text= data.count2
+
+mixin quoteItem(data)
+	.quote-item
+		if data.type == "icon"
+			.quote-icon 
+				img(src= data.src)
+		else 
+			img(src= data.src).quote-image
+		.quote-info
+			p.quote-desc.text= data.desc
+			span.quote-author= data.author
