@@ -1,4 +1,5 @@
 .footer {
+  @include bg(white);
   &-top {
     padding: 7rem 0;
     @include flexbox(stretch, space-between);

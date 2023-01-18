@@ -1,5 +1,6 @@
 .story {
   padding: 10rem 0;
+  @include bg(white);
   &-list {
     padding-top: 5rem;
   }

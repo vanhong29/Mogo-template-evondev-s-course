@@ -1,5 +1,6 @@
 .team {
   padding: 10rem 0;
+  @include bg(white);
   --image-height: 47rem;
   &-image {
     @include size(100%, var(--image-height));
